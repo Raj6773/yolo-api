@@ -11,7 +11,7 @@ from flask_cors import CORS
 CORS(app)
 
 # Load YOLOv8 model
-model = YOLO("best.pt")  # Ensure your trained model is named 'best.pt'
+model = YOLO("yolo-api/best.pt")  # NEW: Points to the correct location inside yolo-api folder
 
 @app.route('/predict', methods=['POST'])
 def predict():
